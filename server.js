@@ -24,6 +24,11 @@ mongoose.connect(MONGODB_URI, {
   useFindAndModify: true,
   useUnifiedTopology: true,
 });
+// mongoose.connect(MONGODB_URI, {
+//   useNewUrlParser: true,
+//   useFindAndModify: true,
+//   useUnifiedTopology: true,
+// });
 /****
  * Error / Success
  **/
