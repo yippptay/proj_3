@@ -56,20 +56,20 @@ routes.get("/clear", (req, res) => {
 /****
  * Empty cart
  **/
-routes.get("/client/clear", (req, res) => {
-  User.findOneAndUpdate(
-    { client: "client" },
-    { shopping_cart: [] },
-    (err, docs) => {
-      if (err) {
-        show(err);
-      } else {
-        show(docs);
-        res.redirect("/products/client");
-      }
-    }
-  );
-});
+// routes.get("/client/clear", (req, res) => {
+//   User.findOneAndUpdate(
+//     { client: "client" },
+//     { shopping_cart: [] },
+//     (err, docs) => {
+//       if (err) {
+//         show(err);
+//       } else {
+//         show(docs);
+//         res.redirect("/products/client");
+//       }
+//     }
+//   );
+// });
 
 /****
  * Routes

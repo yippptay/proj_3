@@ -2,6 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const productSchema = new Schema(
   {
+    spotifyURI: String,
     name: String,
     description: String,
     img: String,
