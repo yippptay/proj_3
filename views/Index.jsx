@@ -1,12 +1,9 @@
+/****
+ * Index route
+ **/
+
 const React = require("react");
 const Layout = require("./components/Layout.jsx");
-
-function httpGet(theUrl) {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", theUrl, false); // false for synchronous request
-  xmlHttp.send(null);
-  return xmlHttp.responseText;
-}
 
 const Index = (props) => {
   return (
@@ -49,7 +46,7 @@ const Index = (props) => {
                       fontWeight: "bold",
                     }}
                   >
-                    <a href={`/products/${value._id}`}>
+                    <a href={`/products/${value._id}`}> {/* Show route */}
                       <div style={{ color: "#1ed760" }}>{value.title}</div>
                     </a>
                   </div>

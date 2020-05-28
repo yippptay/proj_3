@@ -1,3 +1,7 @@
+/****
+ * Edit route
+ **/
+
 const React = require("react");
 const Layout = require("./components/Layout.jsx");
 
@@ -14,7 +18,7 @@ const Edit = (props) => {
         </a>
         <br />
         <br />
-        <form action={`/products/${product._id}?_method=PUT`} method="POST">
+        <form action={`/products/${product._id}?_method=PUT`} method="POST"> {/* Update route */}
           <input type="text" name="title" defaultValue={product.title} />
           <br />
           <input type="text" name="artist" defaultValue={product.artist} />

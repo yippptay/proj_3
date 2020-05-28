@@ -39,4 +39,9 @@ module.exports = [
     artist: "Shoji Meguro",
     link: "Ec4YbVP9R-A",
   },
+  {
+    title: "TOMBOY",
+    artist: "HYUKOH",
+    link: "pC6tPEaAiYU",
+  },
 ];

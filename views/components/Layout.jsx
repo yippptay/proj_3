@@ -1,3 +1,7 @@
+/****
+ * Template
+ **/
+
 const React = require("react");
 
 const Layout = (props) => {

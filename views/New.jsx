@@ -1,3 +1,7 @@
+/****
+ * New route
+ **/
+
 const React = require("react");
 const Layout = require("./components/Layout.jsx");
 
@@ -12,7 +16,7 @@ const New = () => {
         </a>
         <br />
         <br />
-        <form action="/products/product" method="POST">
+        <form action="/products/product" method="POST"> {/* Create route */}
           <input type="text" name="title" placeholder="title" />
           <br />
           <input type="text" name="artist" placeholder="artist" />

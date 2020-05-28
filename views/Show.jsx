@@ -1,3 +1,7 @@
+/****
+ * Show route
+ **/
+
 const React = require("react");
 const Layout = require("./components/Layout.jsx");
 
@@ -30,13 +34,13 @@ const Show = (props) => {
               <a href="/products" className="btn btn-secondary">
                 Home
               </a>
-              <form action={`/products/${product._id}/edit`} method="GET">
+              <form action={`/products/${product._id}/edit`} method="GET"> {/* Edit route */}
                 <input type="submit" value="Edit" className="btn btn-warning" />
               </form>
               <form
                 action={`/products/${product._id}?_method=DELETE`}
                 method="POST"
-              >
+              > {/* Delete route */}
                 <input
                   type="submit"
                   value="Delete"
