@@ -7,7 +7,7 @@ const Edit = (props) => {
     <Layout>
       <div style={{ height: "330px" }}>
         <br />
-        <h1>{product.name}</h1>
+        <h1 style={{ color: "#1ed760" }}>{product.title}</h1>
         <br />
         <a href="/products" className="btn btn-primary">
           Home
@@ -15,20 +15,11 @@ const Edit = (props) => {
         <br />
         <br />
         <form action={`/products/${product._id}?_method=PUT`} method="POST">
-          <input type="text" name="name" defaultValue={product.name} />
+          <input type="text" name="title" defaultValue={product.title} />
           <br />
-          <input
-            type="text"
-            name="description"
-            defaultValue={product.description}
-          />
+          <input type="text" name="artist" defaultValue={product.artist} />
           <br />
-          <input type="text" name="img" defaultValue={product.img} />
-          <br />
-          <input type="text" name="price" defaultValue={product.price} />
-          <br />
-          <input type="text" name="platform" defaultValue={product.platform} />
-          <br />
+          <input type="text" name="link" defaultValue={product.link} />
           <br />
           <input
             type="submit"
@@ -38,6 +29,11 @@ const Edit = (props) => {
           />
         </form>
       </div>
+      <br />
+      <br />
+      <br />
+      <h2 style={{ color: "#1ed760" }}>Here is how to find the ID</h2>
+      <img src="https://qph.fs.quoracdn.net/main-qimg-2bd872b21fc3374147706f6fadbf98d6"></img>
     </Layout>
   );
 };

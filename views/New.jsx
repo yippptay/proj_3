@@ -5,7 +5,7 @@ const New = () => {
   return (
     <Layout>
       <div style={{ height: "330px" }}>
-        <h1>Add New Item</h1>
+        <h1 style={{ color: "#1ed760" }}>Add New Item</h1>
         <br />
         <a href="/products" className="btn btn-primary">
           Home
@@ -13,17 +13,11 @@ const New = () => {
         <br />
         <br />
         <form action="/products/product" method="POST">
-        <input type="text" name="spotifyURI" placeholder="spotifyURI" />
+          <input type="text" name="title" placeholder="title" />
           <br />
-          <input type="text" name="name" placeholder="name" />
+          <input type="text" name="artist" placeholder="artist" />
           <br />
-          <input type="text" name="description" placeholder="description" />
-          <br />
-          <input type="text" name="img" placeholder="image url" />
-          <br />
-          <input type="number" name="price" placeholder="price" />
-          <br />
-          <input type="text" name="platform" placeholder="platform" />
+          <input type="text" name="link" placeholder="ID" />
           <br />
           <br />
           <input
@@ -34,6 +28,11 @@ const New = () => {
           />
         </form>
       </div>
+      <br />
+      <br />
+      <br />
+      <h2 style={{ color: "#1ed760" }}>Here is how to find the ID</h2>
+      <img src="https://qph.fs.quoracdn.net/main-qimg-2bd872b21fc3374147706f6fadbf98d6"></img>
     </Layout>
   );
 };

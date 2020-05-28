@@ -1,29 +1,38 @@
 const React = require("react");
 const Layout = require("./components/Layout.jsx");
 
+function httpGet(theUrl) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open("GET", theUrl, false); // false for synchronous request
+  xmlHttp.send(null);
+  return xmlHttp.responseText;
+}
+
 const Index = (props) => {
   return (
     <Layout>
       <div style={{ minHeight: "330px" }}>
+        <img
+          src="https://i.imgur.com/9gpJQ5a.png"
+          style={{ display: "block", margin: "auto", width: "75%"}}
+        ></img>
         <br />
-        <img src="https://www.vectorsland.com/imgd/l26398-gamestop-logo-48701.png"></img>
-        <br />
-        <a href="/products/client" className="btn btn-success">
-          Shopping Cart
-        </a>
         <br />
         <br />
         <div className="container-fluid row" style={{ width: "100%" }}>
           {props.products.map((value, index) => {
             return (
-              <div key={value._id} className="card" style={{ width: "25%" }}>
+              <div key={value._id} className="card" style={{ width: "25%", backgroundColor: "#232323" }}>
                 <div className="card-img-top">
                   <a href={`/products/${value._id}`}>
-                    <img
-                      src={value.img}
-                      alt={value.name}
-                      style={{ width: "100%" }}
-                    />
+                    <iframe
+                      width="100%"
+                      alt={value.title}
+                      src={"https://www.youtube.com/embed/" + value.link}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
                   </a>
                 </div>
                 <div className="card-body" style={{ padding: "1em" }}>
@@ -36,17 +45,15 @@ const Index = (props) => {
                       fontWeight: "bold",
                     }}
                   >
-                    <div className="card-text">{value.name}</div>
-                    <div>${value.price}</div>
-                  </div>
-                  <div style={{ color: "#777", textAlign: "center" }}>
-                    {value.platform}
+                    <a href={`/products/${value._id}`}>
+                      <div style={{ color: "#1ed760" }}>{value.title}</div>
+                    </a>
                   </div>
                   <div
                     className="card-text"
                     style={{ marginTop: "1em", fontSize: ".8em" }}
                   >
-                    {value.description}
+                    {value.artist}
                   </div>
                 </div>
               </div>

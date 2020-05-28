@@ -7,27 +7,26 @@ const Show = (props) => {
     <Layout>
       <div style={{ height: "330px" }}>
         <br />
-        <h1>{product.name}</h1>
+        <a href={"https://www.youtube.com/watch?v=" + product.link }>
+          <div style={{ color: "#1ed760", fontSize: "16px" }}>
+          {product.title}
+          </div>
+        </a>
+        <br />
+        <br />
         <div className="container-fluid row">
-          <img className="col" src={product.img} alt={props.product.name} />
+          <iframe
+            width="560"
+            height="315"
+            src={"https://www.youtube.com/embed/" + product.link}
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
           <div className="col">
             <br />
             <br />
-            <br />
-            <h1>${product.price}</h1>
-            <a
-              href={`/products/${product._id}/buy/${product.platform}`}
-              className="btn btn-primary"
-              style={{ fontSize: "1.5em", width: "4em" }}
-            >
-              Buy
-            </a>
-            <div style={{ color: "#777" }}>{product.platform}</div>
-            <div style={{ margin: "1em 0" }}>{product.description}</div>
             <div className="container row">
-              <a href="/products/client" className="btn btn-success">
-                Shopping Cart
-              </a>
               <a href="/products" className="btn btn-secondary">
                 Home
               </a>

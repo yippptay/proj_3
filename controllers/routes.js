@@ -25,21 +25,6 @@ routes.get("/seed", (req, res) => {
 });
 
 /****
- * Cart
- **/
-// routes.get("/client", (req, res) => {
-//   User.find({ client: "client" }, (err, docs) => {
-//     if (err) {
-//       show(err);
-//     } else {
-//       res.render("Cart", {
-//         shopping_cart: docs[0].shopping_cart,
-//       });
-//     }
-//   });
-// });
-
-/****
  * Clear
  **/
 routes.get("/clear", (req, res) => {
@@ -54,58 +39,8 @@ routes.get("/clear", (req, res) => {
 });
 
 /****
- * Empty cart
- **/
-// routes.get("/client/clear", (req, res) => {
-//   User.findOneAndUpdate(
-//     { client: "client" },
-//     { shopping_cart: [] },
-//     (err, docs) => {
-//       if (err) {
-//         show(err);
-//       } else {
-//         show(docs);
-//         res.redirect("/products/client");
-//       }
-//     }
-//   );
-// });
-
-/****
  * Routes
  **/
-
-// Buy //
-routes.get("/:id/buy/:platform", (req, res) => {
-  const id = req.params.id;
-  const newPlatform = req.params.platform - 1;
-
-  Product.findByIdAndUpdate(
-    { _id: id },
-    { platform: newPlatform },
-    { new: true },
-    (err, docs) => {
-      if (err) {
-        show(err);
-      } else {
-        show(docs);
-        User.findOneAndUpdate(
-          { client: "client" },
-          { $push: { shopping_cart: docs } },
-          { new: true },
-          (err, doc) => {
-            if (err) {
-              show(err);
-            } else {
-              show(doc);
-            }
-          }
-        );
-        res.redirect(`/products/${id}`);
-      }
-    }
-  );
-});
 
 // Create //
 routes.post("/product", (req, res) => {
