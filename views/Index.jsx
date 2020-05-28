@@ -14,7 +14,7 @@ const Index = (props) => {
       <div style={{ minHeight: "330px" }}>
         <img
           src="https://i.imgur.com/9gpJQ5a.png"
-          style={{ display: "block", margin: "auto", width: "75%"}}
+          style={{ display: "block", margin: "auto", width: "75%" }}
         ></img>
         <br />
         <br />
@@ -22,7 +22,11 @@ const Index = (props) => {
         <div className="container-fluid row" style={{ width: "100%" }}>
           {props.products.map((value, index) => {
             return (
-              <div key={value._id} className="card" style={{ width: "25%", backgroundColor: "#232323" }}>
+              <div
+                key={value._id}
+                className="card"
+                style={{ width: "25%", backgroundColor: "#232323" }}
+              >
                 <div className="card-img-top">
                   <a href={`/products/${value._id}`}>
                     <iframe

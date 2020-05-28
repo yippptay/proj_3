@@ -7,9 +7,9 @@ const Show = (props) => {
     <Layout>
       <div style={{ height: "330px" }}>
         <br />
-        <a href={"https://www.youtube.com/watch?v=" + product.link }>
+        <a href={"https://www.youtube.com/watch?v=" + product.link}>
           <div style={{ color: "#1ed760", fontSize: "16px" }}>
-          {product.title}
+            {product.title}
           </div>
         </a>
         <br />

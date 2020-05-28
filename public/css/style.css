@@ -23,8 +23,8 @@
   border-radius: 25px;
 }
 
-.btn:hover {
-}
+/* .btn:hover {
+} */
 
 .btn-secondary {
   background-color: #1ed760;
@@ -34,22 +34,22 @@
   background-position: right center;
 }
 
-.btn-warning {
-}
+/* .btn-warning {
+} */
 
 .btn-warning:hover {
   background-position: right center;
 }
 
-.btn-danger {
-}
+/* .btn-danger {
+} */
 
 .btn-danger:hover {
   background-position: right center;
 }
 
-.btn-success {
-}
+/* .btn-success {
+} */
 
 .btn-success:hover {
   background-position: right center;
