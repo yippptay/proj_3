@@ -15,17 +15,10 @@ Keyboard, mouse, and a sense of humor.
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
 * [ReactJS](https://reactjs.org/) - A JavaScript library for building user interfaces
 
-## Contributing
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 * **Taylor Yip** - *Initial work* - [yippptay](https://github.com/yippptay)
 * **Roelof van Krimpen** - *Second Opinion* - [roelofvkr](https://github.com/roelofvkr)
 * **Arthur Bernier Jr** - *Renaissance Man* - [arthurbernierjr](https://git.generalassemb.ly/arthurbernierjr)
-
 
 ## Acknowledgments
 My 7 cans of NOS energy drinks.
